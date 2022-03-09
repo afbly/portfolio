@@ -1,0 +1,6 @@
+*.css
+*.sass
+*.scss
+*.svg
+.vscode
+tailwind.config.js
