@@ -1,11 +1,11 @@
 import React from 'react'
-import Home from './pages/Home'
+import Navbar from './sections/navbar'
 import './assets/styles/app.scss'
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Navbar />
     </>
   )
 }

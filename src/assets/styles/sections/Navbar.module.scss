@@ -1,0 +1,82 @@
+.navbar {
+  @apply overflow-hidden;
+
+  &__container {
+    @apply relative z-10 flex py-4 px-8 align-middle justify-between;
+  }
+
+  &__container__logo {
+    @apply relative justify-self-start;
+  }
+
+  &__container__hamburger {
+    @apply relative flex justify-center items-center cursor-pointer duration-500 ease-in-out;
+  }
+
+  &__container__hamburger__line {
+    @apply w-7 h-1 bg-tertiary duration-500 ease-in-out;
+  
+    &::before,
+    &::after {
+      content: '';
+      @apply absolute w-7 h-1 bg-tertiary duration-500 ease-in-out;
+    }
+  
+    &::before {
+      @apply -translate-y-2.5;
+    }
+  
+    &::after {
+      @apply translate-y-2.5;
+    }
+  }
+
+  &__container__hamburger__line__active {
+    @apply w-7 h-1 duration-500 ease-in-out bg-none -translate-x-12;
+  
+    &::before,
+    &::after {
+      content: '';
+      @apply absolute w-7 h-1 bg-tertiary duration-500 ease-in-out;
+    }
+  
+    &::before {
+      @apply rotate-45 translate-x-12;
+    }
+  
+    &::after {
+      @apply -rotate-45 translate-x-12;
+    }
+  }
+
+  &__menu {
+    @apply absolute z-0 opacity-0 w-2/3 h-screen py-16 px-8 top-0 text-right -right-[0%] duration-500 ease-out;
+
+    ul {
+      @apply space-y-4;
+    }
+
+    li {
+      @apply translate-x-12 duration-500 ease-out;
+    }
+  }
+
+  &__menu__active {
+    @apply absolute z-0 bg-secondary flex flex-col w-2/3 h-screen right-0 top-0 py-16 px-8 text-right duration-500 ease-out;
+
+    filter: drop-shadow(-3px 0px 8px rgba(0, 0, 0, 0.25));
+    
+    ul {
+      @apply space-y-4;
+    }
+
+    li {
+      @apply translate-x-0 duration-500 ease-out;
+    }
+  }
+
+  &__menu__link {
+    @apply font-body font-bold text-quaternary;
+  }
+
+}
