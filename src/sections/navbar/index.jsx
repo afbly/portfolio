@@ -24,17 +24,15 @@ const Navbar = () => {
 
   return (
     <BrowserRouter>
-      <nav className={cx.navbar}>
-        <div className={cx.navbar__container}>
-          <Link to='/' className={cx.navbar__container__logo}>
-            <img src="../../assets/media/afrahly_mobile.svg" alt="Logo"/>
-          </Link>
-          <div className={cx.navbar__container__hamburger} onClick={handleClick}>
-            <div className={isClicked ? cx.navbar__container__hamburger__line__active : cx.navbar__container__hamburger__line}></div>
-          </div>
+      <div className={cx.navbar}>
+        <Link to='/' className={cx.navbar__logo}>
+          <img src="../../assets/media/afrahly_mobile.svg" alt="Logo"/>
+        </Link>
+        <div className={cx.navbar__hamburger} onClick={handleClick}>
+          <div className={isClicked ? cx.navbar__hamburger__line__active : cx.navbar__hamburger__line}></div>
         </div>
-        <div className={isClicked ? cx.navbar__menu__active : cx.navbar__menu}>
-          <ul>
+        <nav>
+          <ul className={isClicked ? cx.navbar__menu__active : cx.navbar__menu}>
             <li className={cx.navbar__menu__link}>
               <Link to="/">
                 About
@@ -56,8 +54,8 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </BrowserRouter>
   )
 }

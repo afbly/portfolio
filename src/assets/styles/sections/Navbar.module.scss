@@ -1,82 +1,71 @@
 .navbar {
-  @apply overflow-hidden;
+  @apply flex items-center justify-between px-32 py-8;
 
-  &__container {
-    @apply relative z-10 flex py-4 px-8 align-middle justify-between;
-  }
-
-  &__container__logo {
+  &__logo {
     @apply relative justify-self-start;
   }
 
-  &__container__hamburger {
-    @apply relative flex justify-center items-center cursor-pointer duration-500 ease-in-out;
-  }
-
-  &__container__hamburger__line {
-    @apply w-7 h-1 bg-tertiary duration-500 ease-in-out;
-  
-    &::before,
-    &::after {
-      content: '';
-      @apply absolute w-7 h-1 bg-tertiary duration-500 ease-in-out;
-    }
-  
-    &::before {
-      @apply -translate-y-2.5;
-    }
-  
-    &::after {
-      @apply translate-y-2.5;
-    }
-  }
-
-  &__container__hamburger__line__active {
-    @apply w-7 h-1 duration-500 ease-in-out bg-none -translate-x-12;
-  
-    &::before,
-    &::after {
-      content: '';
-      @apply absolute w-7 h-1 bg-tertiary duration-500 ease-in-out;
-    }
-  
-    &::before {
-      @apply rotate-45 translate-x-12;
-    }
-  
-    &::after {
-      @apply -rotate-45 translate-x-12;
-    }
-  }
-
   &__menu {
-    @apply absolute z-0 opacity-0 w-2/3 h-screen py-16 px-8 top-0 text-right -right-[0%] duration-500 ease-out;
-
-    ul {
-      @apply space-y-4;
-    }
-
-    li {
-      @apply translate-x-12 duration-500 ease-out;
-    }
-  }
-
-  &__menu__active {
-    @apply absolute z-0 bg-secondary flex flex-col w-2/3 h-screen right-0 top-0 py-16 px-8 text-right duration-500 ease-out;
-
-    filter: drop-shadow(-3px 0px 8px rgba(0, 0, 0, 0.25));
-    
-    ul {
-      @apply space-y-4;
-    }
-
-    li {
-      @apply translate-x-0 duration-500 ease-out;
-    }
+    @apply flex gap-x-8 p-0 m-0 text-right;  
   }
 
   &__menu__link {
-    @apply font-body font-bold text-quaternary;
+    @apply text-quaternary font-body font-bold;
   }
 
+  @media screen and (max-width: 35em) {
+    @apply py-4 px-8;
+
+    &__menu {
+      @apply bg-secondary flex-col fixed gap-x-0 gap-y-1 py-16 px-8 text-base z-0;
+      @apply translate-x-[100%] text-right;
+    }
+
+    &__menu__active {
+      inset: 0 0 0 30%;
+      filter: drop-shadow(-2px 0px 5px rgba(0, 0, 0, 0.35));
+      @apply bg-secondary flex-col fixed gap-x-0 gap-y-1 py-16 px-8 text-base z-0 text-right;
+      @apply -translate-x-[0%] duration-1000 ease-in-out
+    }
+
+    &__hamburger {
+      @apply top-6 right-6 z-10 absolute flex justify-center items-center cursor-pointer duration-500 ease-in-out;
+    }
+  
+    &__hamburger__line {
+      @apply w-7 h-1 bg-tertiary duration-500 ease-in-out;
+    
+      &::before,
+      &::after {
+        content: '';
+        @apply absolute w-7 h-1 bg-tertiary duration-500 ease-in-out;
+      }
+    
+      &::before {
+        @apply -translate-y-2.5;
+      }
+    
+      &::after {
+        @apply translate-y-2.5;
+      }
+    }
+  
+    &__hamburger__line__active {
+      @apply w-7 h-1 duration-500 ease-in-out bg-none -translate-x-12;
+    
+      &::before,
+      &::after {
+        content: '';
+        @apply absolute w-7 h-1 bg-tertiary duration-500 ease-in-out;
+      }
+    
+      &::before {
+        @apply rotate-45 translate-x-12;
+      }
+    
+      &::after {
+        @apply -rotate-45 translate-x-12;
+      }
+    }  
+  }
 }
