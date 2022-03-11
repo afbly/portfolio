@@ -3,6 +3,7 @@ import {
   BrowserRouter,
   Link
 } from 'react-router-dom'
+import logo from '../../assets/media/img/afrahly_logo.png'
 import cx from '../../assets/styles/sections/Navbar.module.scss'
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
     <BrowserRouter>
       <div className={cx.navbar}>
         <Link to='/' className={cx.navbar__logo}>
-          <img src="../../assets/media/afrahly_mobile.svg" alt="Logo"/>
+          <img src={logo} alt="Logo"/>
         </Link>
         <div className={cx.navbar__hamburger} onClick={handleClick}>
           <div className={isClicked ? cx.navbar__hamburger__line__active : cx.navbar__hamburger__line}></div>
