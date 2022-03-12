@@ -1,0 +1,30 @@
+.about {
+  @apply flex flex-col bg-secondary px-32 py-8 gap-y-8;
+
+  &__paragraph {
+    @apply flex flex-col gap-y-4;
+
+    h3 {
+      @apply font-body text-lg text-quaternary;
+    }
+  }
+
+  &__paragraph__technologies__container {
+    @apply flex gap-x-12;
+  }
+
+  &__paragraph__technologies {
+    @apply flex flex-col;
+  }
+
+  @media screen and (max-width: 35em) {
+    @apply px-8 py-8 gap-y-4;
+
+    &__paragraph {
+
+      h3 {
+        @apply font-body text-base text-quaternary;
+      }
+    }
+  }
+}

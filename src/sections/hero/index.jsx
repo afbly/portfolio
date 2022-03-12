@@ -1,13 +1,19 @@
 import React from 'react'
-import github from '../../assets/media/img/github.png'
-import linkedin from '../../assets/media/img/linkedin.png'
-import facebook from '../../assets/media/img/facebook.png'
-import twitter from '../../assets/media/img/twitter.png'
+import github from '../../assets/media/svg/github.svg'
+import linkedin from '../../assets/media/svg/linkedin.svg'
+import facebook from '../../assets/media/svg/facebook.svg'
+import twitter from '../../assets/media/svg/twitter.svg'
+// import avatar from '../../assets/media/svg/avatar.svg'
+import { ReactComponent as Avatar } from '../../assets/media/svg/avatar.svg'
 import cx from '../../assets/styles/sections/Hero.module.scss'
 
 const Hero = () => {
   return (
     <div className={cx.hero}>
+      <div className={cx.hero__avatar}>
+        {/* <img src={avatar} alt="Avatar" /> */}
+        <Avatar />
+      </div>
       <div className={cx.hero__cta}>
         <div>
           <h2>Hi, my name is</h2>

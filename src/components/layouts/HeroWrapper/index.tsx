@@ -1,1 +1,0 @@
-import cx from './HeroWrapper.module.scss';
