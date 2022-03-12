@@ -3,14 +3,18 @@ import {
   BrowserRouter,
   Link
 } from 'react-router-dom'
-import logo from '../../assets/media/img/afrahly_logo.png'
+import logo from '../../assets/media/svg/afrahly.svg'
 import cx from '../../assets/styles/sections/Navbar.module.scss'
 
 const Navbar = () => {
   const [isClicked, setClick] = useState(false)
   // const [navbar, setNavbar] = useState(false)
 
-  const handleClick = () => setClick(!isClicked)
+  const handleClick = () => {
+    return (
+      setClick(!isClicked)
+    )
+  }
   // const closeMobileMenu = () => setClick(false)
 
   // const changeBackground = () => {

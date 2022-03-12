@@ -1,0 +1,7 @@
+.wrapper {
+  @apply relative px-32 py-8;
+
+  @media screen and (max-width: 35em) {
+    @apply relative px-8 py-8;
+  }
+}

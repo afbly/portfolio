@@ -1,0 +1,23 @@
+.header {
+  @apply flex gap-x-6 items-center align-middle;
+
+  h1 {
+    @apply font-body font-bold text-2xl text-quaternary;
+  }
+
+  div {
+    @apply w-64 border-t-1.5 border-tertiary;
+  }
+
+  @media screen and (max-width: 35em) {
+    @apply gap-x-4;
+
+    h1 {
+      @apply text-lg;
+    }
+
+    div {
+      @apply w-36 border-t-1.5;
+    }
+  }
+}

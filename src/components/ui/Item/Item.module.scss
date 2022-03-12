@@ -1,0 +1,21 @@
+.item {
+  @apply flex items-center gap-x-2;
+
+  &__arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid #EC6D41;
+  }
+
+  h3 {
+    @apply font-body text-lg text-quaternary;
+  }
+
+  @media screen and (max-width: 35em) {
+    h3 {
+      @apply text-base;
+    }
+  }
+}
