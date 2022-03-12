@@ -5,7 +5,9 @@ import cx from './Item.module.scss'
 const Item = (props) => {
   return (
     <div className={cx.item}>
-      <div className={cx.item__arrow}></div>
+      <div>
+        <span className={cx.item__arrow}></span>
+      </div>
       <h3>{props.children}</h3>
     </div>
   )
