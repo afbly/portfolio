@@ -1,0 +1,53 @@
+.projects {
+  @apply flex flex-col bg-secondary px-32 py-24 gap-y-8;
+
+  &__body {
+    @apply flex flex-col gap-y-20;
+  }
+  
+  &__body__header {
+    @apply flex w-full justify-center items-center text-center;
+
+    h1 {
+      @apply w-full font-body font-bold text-xl text-quaternary;
+    }
+
+    span {
+      @apply w-4/5 border-t-1.5 border-tertiary;
+    }
+  }
+
+  &__body__noteworthy {
+    @apply flex justify-between items-center;
+  }
+
+  @media screen and (max-width: 23.4375em) {
+    
+  }
+
+  @media screen and (max-width: 35em) {
+    @apply px-8 py-8 gap-y-4;
+
+    &__body {
+      @apply flex flex-col gap-y-8;
+    }
+
+    &__body__header {
+      @apply flex-col;
+
+      h1 {
+        @apply text-lg;
+      }
+
+      span {
+        &:first-of-type {
+          @apply hidden;
+        }
+      }
+    }
+
+    &__body__noteworthy {
+      @apply flex-col;
+    }
+  }
+}

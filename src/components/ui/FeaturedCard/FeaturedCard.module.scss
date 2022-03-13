@@ -1,0 +1,125 @@
+.card {
+  @apply relative w-full h-96 flex float-left;
+
+  &__image {
+    @apply relative w-2/3;
+
+    div {
+      @apply z-10 absolute top-0 h-full w-full rounded-md bg-tertiary bg-opacity-40;
+    }
+
+    img { 
+      object-fit: cover;
+      @apply relative w-full h-full z-0 rounded-md;
+    }
+
+    &:hover {
+      div {
+        @apply bg-opacity-0;
+      }
+    }
+  }
+
+  &__content {
+    @apply z-20 absolute flex flex-col top-0 right-0 w-2/3 gap-y-5 items-end;
+  }
+
+  &__content__title {
+    @apply text-right w-1/2;
+
+    h1 {
+      @apply font-body font-bold text-2xl text-quaternary tracking-wider;
+    }
+
+    h2 {
+      @apply font-body text-base text-tertiary;
+    }
+  }
+
+  &__content__description {
+    background: linear-gradient(180deg, #FF8A60 0%, #EC6D41 100%);
+    mix-blend-mode: normal;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    @apply p-4;
+
+    p {
+      @apply font-body text-primary text-base;
+    }
+  }
+
+  &__content__technologies {
+    @apply list-none w-full flex flex-wrap justify-end gap-x-4 font-body text-sm text-quaternary;
+  }
+
+  &__content__link {
+    @apply flex w-full justify-end;
+
+    a {
+      @apply cursor-pointer;
+    }
+
+    img {
+      @apply -translate-y-0 duration-500 ease-in-out;
+    }
+
+    &:hover {
+      img {
+        @apply -translate-y-1 duration-500 ease-in-out;
+      }
+    }
+  }
+
+  @media screen and (max-width: 23.4375em) {
+    &__content {
+      @apply gap-y-2;
+    }
+
+    &__content_description {
+      @apply leading-5;
+    }
+  }
+
+  @media screen and (max-width: 35em) {
+    height: 70vh;
+    @apply w-full;
+  }
+
+  @media screen and (max-width: 48em) {
+    @apply w-full;
+
+    &__image {
+      @apply w-full pointer-events-none;
+      
+      div {
+        @apply bg-darkPrimary bg-opacity-80;
+      }
+    }
+
+    &__content {
+      @apply left-0 items-start justify-center w-full h-full p-4;
+    }
+
+    &__content__title {
+      @apply text-left w-full;
+
+      h1 {
+        @apply text-primary text-xl;
+      }
+    }
+
+    &__content__description {
+      background: none;
+      box-shadow: none;
+      @apply p-0;
+    }
+
+    &__content__technologies {
+      @apply justify-start text-primary;
+    }
+
+    &__content__link {
+      @apply order-first;
+    }
+  }
+}

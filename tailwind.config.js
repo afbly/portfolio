@@ -20,7 +20,8 @@ module.exports = {
       primary: '#FFF8F5',
       secondary: '#FFEFE8',
       tertiary: '#EC6D41',
-      quaternary: '#2F2F2F'
+      quaternary: '#2F2F2F',
+      darkPrimary: '#592716'
     },
     fontFamily: {
       body: ['Avenir', 'sans-serif'],
