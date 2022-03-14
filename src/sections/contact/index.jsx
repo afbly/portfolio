@@ -10,7 +10,7 @@ import cx from '../../assets/styles/sections/Contact.module.scss'
 
 const Contact = () => {
   return (
-    <div className={cx.contact}>
+    <div className={cx.contact} id="contact">
       <SectionWrapper>
         <Header>Contact Me</Header>
         <div className={cx.contact__cta}>

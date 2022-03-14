@@ -1,5 +1,11 @@
+@import '../animations.scss';
+
 .about {
   @apply flex bg-secondary z-0;
+
+  animation-duration: 2s;
+  animation-name: fadeInUp;
+  animation-iteration-count: 1;
 
   &__paragraph {
     @apply flex flex-col gap-y-4;

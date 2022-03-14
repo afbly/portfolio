@@ -6,7 +6,7 @@ import cx from '../../assets/styles/sections/About.module.scss'
 
 const About = () => {
   return (
-    <div className={cx.about}>
+    <div className={cx.about} id="about">
       <SectionWrapper>
         <Header>About Me</Header>
         <div className={cx.about__paragraph}>

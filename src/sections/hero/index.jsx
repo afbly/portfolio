@@ -8,7 +8,7 @@ import cx from '../../assets/styles/sections/Hero.module.scss'
 
 const Hero = () => {
   return (
-    <div className={cx.hero}>
+    <div className={cx.hero} id="home">
       <div className={cx.hero__avatar}>
         <Avatar />
       </div>
