@@ -1,5 +1,5 @@
 .experience {
-  @apply flex flex-col px-32 py-24 gap-y-8;
+  @apply flex;
 
   &__body {
     @apply flex flex-col justify-center items-center;

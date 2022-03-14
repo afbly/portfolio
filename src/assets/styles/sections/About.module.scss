@@ -1,10 +1,10 @@
 .about {
-  @apply flex flex-col bg-secondary px-32 py-24 gap-y-8;
+  @apply flex bg-secondary;
 
   &__paragraph {
     @apply flex flex-col gap-y-4;
 
-    h3 {
+    p {
       @apply font-body text-lg text-quaternary;
     }
   }
