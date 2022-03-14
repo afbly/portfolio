@@ -1,5 +1,5 @@
 .card {
-  @apply relative w-full h-96;
+  @apply relative w-full h-80;
 
   img {
     object-fit: cover;
@@ -53,6 +53,8 @@
   }
 
   @media screen and (max-width: 48em) {
+    @apply h-96;
+
     img {
       @apply border-0;
     }
