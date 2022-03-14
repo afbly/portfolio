@@ -1,12 +1,8 @@
 .hero {
-  @apply relative z-0 w-screen h-screen flex px-32 justify-center gap-x-10;
+  @apply relative z-0 w-screen h-screen flex px-44 justify-center gap-x-10 items-center;
 
   &__avatar {
-    @apply flex justify-center align-middle items-center;
-
-    svg {
-      @apply w-64;
-    }
+    @apply w-1/2 h-1/2 flex justify-center align-middle items-center;
   }
 
   &__cta {
@@ -36,6 +32,10 @@
   @media screen and (max-width: 35em) {
     @apply flex-col gap-x-0 gap-y-4 h-full justify-center;
 
+    &__avatar {
+      @apply w-full;
+    }
+
     &__cta {
       @apply relative flex flex-col gap-y-3 justify-center;
     
@@ -54,6 +54,6 @@
   }
 
   @media screen and (max-width: 48em) {
-    @apply px-8 py-8;
+    @apply h-screen px-8 py-8;
   }
 }

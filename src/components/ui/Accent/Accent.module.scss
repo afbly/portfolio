@@ -1,0 +1,29 @@
+.accent {
+  width: 98.8vw;
+  @apply px-28 justify-between;
+  @apply font-body text-base text-tertiary flex absolute fixed top-0 h-screen;
+
+  span {
+    width: 1px;
+    @apply h-28 bg-tertiary;
+  }
+
+  &__pagination {
+    @apply flex flex-col gap-y-4;
+  }
+
+  &__email {
+    @apply flex flex-col justify-end items-end;
+  }
+
+  &__email__text {
+    transform: rotate(90deg);
+    h3 {
+      transform: translate(-6em, -5.45em);
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    @apply hidden -z-20;
+  }
+}

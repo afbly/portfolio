@@ -1,5 +1,5 @@
 .projects {
-  @apply flex bg-secondary;
+  @apply z-0 flex bg-secondary;
 
   &__body {
     @apply flex flex-col gap-y-20;

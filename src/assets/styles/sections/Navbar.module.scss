@@ -1,5 +1,5 @@
 .navbar {
-  @apply flex items-center justify-between px-32 py-8;
+  @apply relative flex items-center justify-between px-44 py-8 z-20;
 
   &__logo {
     @apply relative justify-self-start w-full;
@@ -17,14 +17,14 @@
     @apply py-8 px-8;
 
     &__menu {
-      @apply bg-secondary flex-col fixed gap-x-0 py-20 px-8 text-base z-40;
+      @apply bg-secondary flex-col fixed gap-x-0 py-20 px-8 text-base z-20;
       @apply translate-x-[100%] text-right;
     }
 
     &__menu__active {
       inset: 0 0 0 30%;
       filter: drop-shadow(-2px 0px 5px rgba(0, 0, 0, 0.35));
-      @apply bg-secondary flex-col fixed gap-x-0 gap-y-1 py-20 px-8 text-base z-40 text-right;
+      @apply bg-secondary flex-col fixed gap-x-0 gap-y-1 py-20 px-8 text-base z-20 text-right;
       @apply -translate-x-[0%] duration-1000 ease-in-out;
     }
 

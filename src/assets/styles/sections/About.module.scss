@@ -1,5 +1,5 @@
 .about {
-  @apply flex bg-secondary;
+  @apply flex bg-secondary z-0;
 
   &__paragraph {
     @apply flex flex-col gap-y-4;
