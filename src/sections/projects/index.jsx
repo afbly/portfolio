@@ -58,7 +58,7 @@ const Projects = () => {
     }
   ]
   return (
-    <div className={cx.projects}>
+    <div className={cx.projects} id="projects">
       <SectionWrapper>
         <Header>Projects</Header>
         <div className={cx.projects__body}>

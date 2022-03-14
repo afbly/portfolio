@@ -3,6 +3,7 @@ import {
   BrowserRouter,
   Link
 } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import logo from '../../assets/media/svg/afrahly.svg'
 import cx from '../../assets/styles/sections/Navbar.module.scss'
 
@@ -39,24 +40,24 @@ const Navbar = () => {
         <nav>
           <ul className={isClicked ? cx.navbar__menu__active : cx.navbar__menu}>
             <li className={cx.navbar__menu__link}>
-              <Link to="/">
+              <HashLink smooth to="/#about">
                 About
-              </Link>
+              </HashLink>
             </li>
             <li className={cx.navbar__menu__link}>
-              <Link to="/">
+              <HashLink smooth to="/#experience">
                 Experience
-              </Link>
+              </HashLink>
             </li>
             <li className={cx.navbar__menu__link}>
-              <Link to="/">
+              <HashLink smooth to="/#projects">
                 Projects
-              </Link>
+              </HashLink>
             </li>
             <li className={cx.navbar__menu__link}>
-              <Link to="/">
+              <HashLink smooth to="/#contact">
                 Contact
-              </Link>
+              </HashLink>
             </li>
           </ul>
         </nav>

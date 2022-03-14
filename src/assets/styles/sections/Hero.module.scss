@@ -1,5 +1,11 @@
+@import '../animations.scss';
+
 .hero {
   @apply relative z-0 w-screen h-screen flex px-44 justify-center gap-x-10 items-center;
+
+  animation-duration: 2s;
+  animation-name: fadeInUp;
+  animation-iteration-count: 1;
 
   &__avatar {
     @apply w-1/2 h-1/2 flex justify-center align-middle items-center;
@@ -30,7 +36,7 @@
   }
   
   @media screen and (max-width: 35em) {
-    @apply flex-col gap-x-0 gap-y-4 h-full justify-center;
+    @apply flex-col gap-x-0 gap-y-4 h-screen justify-center;
 
     &__avatar {
       @apply w-full;
@@ -47,7 +53,7 @@
         @apply text-base;
       }
     
-      h3 {
+      p {
         @apply text-base;
       }
     }

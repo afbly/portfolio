@@ -6,7 +6,7 @@ import cx from '../../assets/styles/sections/Experience.module.scss'
 
 const Experience = () => {
   return (
-    <div className={cx.experience}>
+    <div className={cx.experience} id="experience">
       <SectionWrapper>
         <Header>My Experience</Header>
         <div className={cx.experience__body}>
