@@ -1,0 +1,40 @@
+.contact {
+  @apply h-screen;
+
+  &__cta {
+    @apply relative flex flex-col gap-y-9 justify-center items-center p-8;
+
+    p {
+      @apply font-body text-2xl text-quaternary text-center;
+    }
+  }
+
+  &__cta__links {
+    @apply flex gap-x-2;
+  }
+  
+  &__cta__link {
+    @apply cursor-pointer;
+  }
+
+  @media screen and (max-width: 23.4375em) {
+
+  }
+
+  @media screen and (max-width: 35em) {
+  
+  }
+
+  @media screen and (max-width: 48em) {
+
+    &__cta {
+      p {
+        @apply font-body text-lg text-quaternary text-center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 64em) {
+    
+  }
+}

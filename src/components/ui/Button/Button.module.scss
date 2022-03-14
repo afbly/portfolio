@@ -1,0 +1,41 @@
+.button {
+  max-width: 12.5em;
+  @apply w-full;
+
+  &__primary {
+    @apply flex bg-tertiary rounded-xl h-16 justify-center items-center cursor-pointer;
+
+    a {
+      @apply font-body font-bold text-primary text-lg tracking-wider;
+    }
+
+    &:hover {
+      @apply -translate-y-1 duration-500 ease-in-out;
+    }
+  }
+
+  &__secondary {
+    @apply flex bg-none border-4 border-tertiary rounded-xl h-16 justify-center items-center cursor-pointer;
+
+    a {
+      @apply font-body font-bold text-tertiary text-lg tracking-wider;
+    }
+
+    &:hover {
+      @apply -translate-y-1 duration-500 ease-in-out;
+    }
+  }
+
+  @media screen and (max-width: 35em) {
+    max-width: 100%;
+
+    &__primary {
+      @apply flex bg-tertiary rounded-xl h-12 justify-center items-center;
+    }
+  
+    &__secondary {
+      @apply flex bg-none border-4 border-tertiary rounded-xl h-12 justify-center items-center;
+    }
+  }
+
+}

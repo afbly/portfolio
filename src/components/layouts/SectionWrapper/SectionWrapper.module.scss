@@ -1,5 +1,5 @@
 .wrapper {
-  @apply flex flex-col relative px-32 py-24 gap-y-8;
+  @apply flex flex-col relative px-32 py-24 gap-y-8 w-full;
 
   @media screen and (max-width: 23.4375em) {
 

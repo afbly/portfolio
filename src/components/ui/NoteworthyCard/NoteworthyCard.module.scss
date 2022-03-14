@@ -3,7 +3,8 @@
 
   img {
     object-fit: cover;
-    @apply relative w-full h-full z-0 rounded-md;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    @apply relative w-full h-full z-0 rounded-md border-3 border-tertiary;
   }
   
   &__content {
@@ -33,7 +34,7 @@
     }
 
     img {
-      @apply  w-auto h-auto -translate-y-0 duration-500 ease-in-out;
+      @apply  border-0 w-auto h-auto -translate-y-0 duration-500 ease-in-out;
     }
 
     &:hover {
@@ -52,6 +53,10 @@
   }
 
   @media screen and (max-width: 48em) {
+    img {
+      @apply border-0;
+    }
+
     &__content {
       @apply opacity-100 p-4;
     }
