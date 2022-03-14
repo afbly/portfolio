@@ -16,12 +16,12 @@ const Hero = () => {
         <div>
           <h2>Hi, my name is</h2>
           <h1>Afrahly Afable.</h1>
-          <h3>
+          <p>
             I am a web designer and developer.
             Currently, I’m studying at Polytechnic University
             of the Philippines as a 4th year Computer Science student.
             I like web development and I’m also interested in data science.
-          </h3>
+          </p>
         </div>
         <div className={cx.hero__cta__links}>
           <a href="https://github.com/afbly" className={cx.hero__cta__link}>

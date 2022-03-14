@@ -1,11 +1,19 @@
 .wrapper {
-  @apply relative px-32 py-8;
+  @apply flex flex-col relative px-32 py-24 gap-y-8;
+
+  @media screen and (max-width: 23.4375em) {
+
+  }
 
   @media screen and (max-width: 35em) {
-    @apply relative px-8 py-8;
+  
   }
 
   @media screen and (max-width: 48em) {
-    @apply relative px-8 py-8;
+    @apply px-8 py-8;
+  }
+
+  @media screen and (max-width: 64em) {
+    
   }
 }

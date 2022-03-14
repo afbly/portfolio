@@ -6,6 +6,8 @@ import absentilyzer from '../../assets/media/img/ab_sentilyzer.png'
 import headHunter from '../../assets/media/img/head_hunter_ph.png'
 import oqulo from '../../assets/media/img/oqulo_conversion.jpeg'
 import adviceGenerator from '../../assets/media/img/advice_generator.jpeg'
+import restaurantPOS from '../../assets/media/img/ja_faim.png'
+import SectionWrapper from '../../components/layouts/SectionWrapper'
 import FeaturedCard from '../../components/ui/FeaturedCard'
 import NoteworthyCard from '../../components/ui/NoteworthyCard'
 
@@ -50,25 +52,27 @@ const Projects = () => {
       id: 1,
       title: 'Restaurant POS System',
       description: 'A simple POS system that allows user to manage orders then see the receipt after the process. The system also allows user the number of products in the inventory and add staff to database.',
-      image: adviceGenerator,
+      image: restaurantPOS,
       technologies: ['JavaFX', 'Java', 'MySQL'],
       repo: '#'
     }
   ]
   return (
     <div className={cx.projects}>
-      <Header>Projects</Header>
-      <div className={cx.projects__body}>
-        <FeaturedCard projects={featuredProjects} />
-        <div className={cx.projects__body__header}>
-          <span />
-          <h1>Other Noteworthy Projects</h1>
-          <span />
+      <SectionWrapper>
+        <Header>Projects</Header>
+        <div className={cx.projects__body}>
+          <FeaturedCard projects={featuredProjects} />
+          <div className={cx.projects__body__header}>
+            <span />
+            <h1>Other Noteworthy Projects</h1>
+            <span />
+          </div>
+          <div className={cx.projects__body__noteworthy}>
+            <NoteworthyCard projects={noteworthyProjects}/>
+          </div>
         </div>
-        <div className={cx.projects__body__noteworthy}>
-          <NoteworthyCard projects={noteworthyProjects}/>
-        </div>
-      </div>
+      </SectionWrapper>
     </div>
   )
 }
