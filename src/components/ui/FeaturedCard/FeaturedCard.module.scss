@@ -1,8 +1,8 @@
 .card {
-  @apply relative w-full h-96 flex float-left;
+  @apply relative w-full h-96 flex;
 
   &__image {
-    @apply relative w-2/3;
+    @apply relative float-left w-2/3;
 
     div {
       @apply z-10 absolute top-0 h-full w-full rounded-md bg-tertiary bg-opacity-40;
@@ -21,7 +21,7 @@
   }
 
   &__content {
-    @apply absolute flex flex-col top-0 right-0 w-full gap-y-5 items-end;
+    @apply absolute flex flex-col float-right w-full gap-y-5 items-end;
   }
 
   &__content__title {
