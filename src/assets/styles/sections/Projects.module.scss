@@ -9,7 +9,7 @@
     @apply flex w-full justify-center items-center text-center;
 
     h1 {
-      @apply w-full font-body font-bold text-xl text-quaternary;
+      @apply w-full font-body font-bold text-2xl text-quaternary;
     }
 
     span {
@@ -45,9 +45,18 @@
     }
   }
 
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 59.25em) {
     &__body__noteworthy {
       @apply flex flex-col gap-y-8;
+    }
+  }
+
+  @media screen and (max-width: 64em) {
+    &__body__header {
+
+      h1 {
+        @apply text-lg;
+      }
     }
   }
 }
