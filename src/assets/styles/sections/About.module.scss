@@ -8,7 +8,7 @@
   animation-iteration-count: 1;
 
   &__paragraph {
-    @apply flex flex-col gap-y-4;
+    @apply flex flex-col space-y-4;
 
     p {
       @apply font-body text-lg text-quaternary;
@@ -16,7 +16,7 @@
   }
 
   &__paragraph__technologies__container {
-    @apply flex gap-x-12;
+    @apply flex space-x-12;
   }
 
   &__paragraph__technologies {
