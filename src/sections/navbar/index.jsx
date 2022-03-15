@@ -7,12 +7,22 @@ const Navbar = () => {
   const [isClicked, setClick] = useState(false)
   // const [navbar, setNavbar] = useState(false)
 
-  const handleClick = () => {
-    return (
-      setClick(!isClicked)
-    )
+  const handleclick = () => {
+    setClick(!isClicked)
+    if (isClicked) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = null
+    }
   }
-  // const closeMobileMenu = () => setClick(false)
+
+  // useEffect(() => {
+  //   if (isClicked) {
+  //     document.body.style.overflow = 'hidden'
+  //   } else {
+  //     document.body.style.overflow = null
+  //   }
+  // })
 
   // const changeBackground = () => {
   //   if (window.scrollY >= 60) {
@@ -29,28 +39,28 @@ const Navbar = () => {
       <HashLink to='/#home' className={cx.navbar__logo}>
         <img src={logo} alt="Logo"/>
       </HashLink>
-      <div className={cx.navbar__hamburger} onClick={handleClick}>
+      <div className={cx.navbar__hamburger} onClick={handleclick}>
         <div className={isClicked ? cx.navbar__hamburger__line__active : cx.navbar__hamburger__line}></div>
       </div>
       <nav>
         <ul className={isClicked ? cx.navbar__menu__active : cx.navbar__menu}>
           <li className={cx.navbar__menu__link}>
-            <HashLink smooth to="/#about">
+            <HashLink smooth to="/#about" onClick={() => setClick(false)}>
               About
             </HashLink>
           </li>
           <li className={cx.navbar__menu__link}>
-            <HashLink smooth to="/#experience">
+            <HashLink smooth to="/#experience" onClick={() => setClick(false)}>
               Experience
             </HashLink>
           </li>
           <li className={cx.navbar__menu__link}>
-            <HashLink smooth to="/#projects">
+            <HashLink smooth to="/#projects" onClick={() => setClick(false)}>
               Projects
             </HashLink>
           </li>
           <li className={cx.navbar__menu__link}>
-            <HashLink smooth to="/#contact">
+            <HashLink smooth to="/#contact" onClick={() => setClick(false)}>
               Contact
             </HashLink>
           </li>

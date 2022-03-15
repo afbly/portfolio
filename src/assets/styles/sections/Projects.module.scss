@@ -2,7 +2,7 @@
   @apply z-0 flex bg-secondary;
 
   &__body {
-    @apply flex flex-col gap-y-20;
+    @apply flex flex-col space-y-20;
   }
   
   &__body__header {
@@ -18,7 +18,7 @@
   }
 
   &__body__noteworthy {
-    @apply flex justify-between items-center gap-x-8;
+    @apply flex justify-between items-center space-x-8;
   }
 
   @media screen and (max-width: 23.4375em) {
@@ -26,10 +26,6 @@
   }
 
   @media screen and (max-width: 35em) {
-    &__body {
-      @apply flex flex-col gap-y-8;
-    }
-
     &__body__header {
       @apply flex-col;
 
@@ -46,8 +42,12 @@
   }
 
   @media screen and (max-width: 59.25em) {
+    &__body {
+      @apply flex flex-col space-y-8;
+    }
+
     &__body__noteworthy {
-      @apply flex flex-col gap-y-8;
+      @apply flex-col space-x-0 space-y-8;
     }
   }
 

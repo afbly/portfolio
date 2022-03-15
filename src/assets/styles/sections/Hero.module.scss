@@ -1,7 +1,7 @@
 @import '../animations.scss';
 
 .hero {
-  @apply relative z-0 w-screen h-screen flex px-44 justify-center gap-x-10 items-center;
+  @apply relative z-0 w-screen h-screen flex px-44 justify-center space-x-10 items-center;
 
   animation-duration: 2s;
   animation-name: fadeInUp;
@@ -12,7 +12,7 @@
   }
 
   &__cta {
-    @apply relative flex flex-col gap-y-3 justify-center;
+    @apply relative flex flex-col space-y-3 justify-center;
   
     h1 {
       @apply font-body font-bold text-2xl text-quaternary;
@@ -28,7 +28,7 @@
   }
 
   &__cta__links {
-    @apply flex gap-x-2;
+    @apply flex space-x-2;
   }
   
   &__cta__link {
@@ -36,14 +36,14 @@
   }
   
   @media screen and (max-width: 35em) {
-    @apply flex-col gap-x-0 gap-y-4 h-screen justify-center;
+    @apply flex-col space-x-0 space-y-4 h-screen justify-center;
 
     &__avatar {
       @apply w-full;
     }
 
     &__cta {
-      @apply relative flex flex-col gap-y-3 justify-center;
+      @apply relative flex flex-col space-y-3 justify-center;
     
       h1 {
         @apply font-body font-bold text-2xl text-quaternary;
@@ -59,7 +59,11 @@
     }
   }
 
-  @media screen and (max-width: 48em) {
-    @apply h-screen px-8 py-8;
+  @media screen and (max-width: 54.0625em) {
+    @apply px-8 py-8 flex-wrap w-auto h-auto space-y-4 space-x-0;
+
+    &__avatar {
+      @apply w-auto h-auto;
+    }
   }
 }

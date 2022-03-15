@@ -21,7 +21,7 @@
   }
 
   &__content {
-    @apply absolute flex flex-col float-right w-full gap-y-5 items-end;
+    @apply absolute flex flex-col float-right w-full space-y-5 items-end;
   }
 
   &__content__title {
@@ -49,7 +49,7 @@
   }
 
   &__content__technologies {
-    @apply list-none flex flex-wrap justify-end gap-x-4 font-body text-sm text-quaternary;
+    @apply list-none flex flex-wrap justify-end space-x-4 font-body text-sm text-quaternary;
   }
 
   &__content__link {
@@ -72,7 +72,7 @@
 
   @media screen and (max-width: 23.4375em) {
     &__content {
-      @apply gap-y-2;
+      @apply space-y-2;
     }
 
     &__content_description {
@@ -85,11 +85,12 @@
     @apply w-full;
   }
 
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 54.0625em) {
     @apply w-full;
 
     &__image {
       @apply w-full pointer-events-none;
+      filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
       
       div {
         @apply bg-darkPrimary bg-opacity-80;
