@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import logo from '../../assets/media/svg/afrahly.svg'
 import cx from '../../assets/styles/sections/Navbar.module.scss'
@@ -7,22 +7,13 @@ const Navbar = () => {
   const [isClicked, setClick] = useState(false)
   // const [navbar, setNavbar] = useState(false)
 
-  const handleclick = () => {
-    setClick(!isClicked)
+  useEffect(() => {
     if (isClicked) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = null
     }
-  }
-
-  // useEffect(() => {
-  //   if (isClicked) {
-  //     document.body.style.overflow = 'hidden'
-  //   } else {
-  //     document.body.style.overflow = null
-  //   }
-  // })
+  })
 
   // const changeBackground = () => {
   //   if (window.scrollY >= 60) {
@@ -39,7 +30,7 @@ const Navbar = () => {
       <HashLink to='/#home' className={cx.navbar__logo}>
         <img src={logo} alt="Logo"/>
       </HashLink>
-      <div className={cx.navbar__hamburger} onClick={handleclick}>
+      <div className={cx.navbar__hamburger} onClick={() => setClick(!isClicked)}>
         <div className={isClicked ? cx.navbar__hamburger__line__active : cx.navbar__hamburger__line}></div>
       </div>
       <nav>
