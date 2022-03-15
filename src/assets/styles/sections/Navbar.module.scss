@@ -1,16 +1,52 @@
+@import '../animations.scss';
+
 .navbar {
   @apply relative flex items-center justify-between px-44 py-8 z-20;
 
   &__logo {
     @apply relative justify-self-start w-full;
+
+    animation-duration: 2s;
+    animation-name: fadeInDown;
+    animation-iteration-count: 1;
   }
 
   &__menu {
-    @apply flex space-x-8 p-0 m-0 text-right;  
+    @apply flex space-x-8 p-0 m-0 text-right;
   }
 
   &__menu__link {
     @apply text-quaternary font-body font-bold;
+
+    &:nth-child(1) {
+      animation-duration: 2.8s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(2) {
+      animation-duration: 2.6s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(3) {
+      animation-duration: 2.4s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(3) {
+      animation-duration: 2.2s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(4) {
+      animation-duration: 2s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
   } 
 
   @media screen and (max-width: 54.0625em) {
@@ -40,6 +76,9 @@
 
     &__hamburger {
       @apply w-screen z-50 relative flex justify-end items-center cursor-pointer duration-500 ease-in-out;
+      animation-duration: 2s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
     }
   
     &__hamburger__line {

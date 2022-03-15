@@ -18,7 +18,7 @@ const Contact = () => {
             I’d love to hear from you! Say hello or ask me a question,
             my inbox is always open and I’ll try my best to get back to you!
           </p>
-          <Button title="Say Hello!" isLink={true} link="#"/>
+          <Button title="Say Hello!" isLink={true} link="mailto:afableafrahly@gmail.com"/>
           <div className={cx.contact__cta__links}>
             <a href="https://github.com/afbly" className={cx.contact__cta__link}>
               <img src={github} alt="GitHub" />
