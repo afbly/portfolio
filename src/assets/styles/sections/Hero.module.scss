@@ -69,8 +69,8 @@
     }
   }
 
-  @media screen and (max-width: 54.0625em) {
-    @apply px-8 py-8 flex-wrap w-auto h-auto space-y-4 space-x-0;
+  @media screen and (max-width: 64em) {
+    @apply p-9 flex-wrap w-auto h-auto space-y-4 space-x-0;
 
     &__avatar {
       @apply w-auto h-auto;
