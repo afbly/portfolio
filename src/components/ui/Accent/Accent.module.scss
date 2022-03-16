@@ -33,7 +33,35 @@
     }
   }
 
+  &__scrollButton {
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    @apply flex justify-center items-center space-x-1 absolute fixed bottom-5 right-7 rounded-full w-12 h-12 bg-tertiary;
+    @apply cursor-pointer;
+
+    span {
+      @apply w-1 h-4 bg-primary rounded-md;
+
+      &:nth-child(1) {
+        @apply rotate-45;
+      }
+
+      &:nth-child(2) {
+        @apply -rotate-45;
+      }
+    }
+  }
+
   @media screen and (max-width: 54.0625em) {
-    @apply hidden -z-20;
+    &__pagination {
+      @apply hidden -z-20;
+    }
+    
+    &__email {
+      @apply hidden -z-20;
+    }
+
+    &__scrollButton {
+      @apply right-5 z-40;
+    }
   }
 }
