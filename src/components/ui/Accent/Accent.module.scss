@@ -12,6 +12,10 @@
   &__pagination {
     @apply absolute top-0 left-28 font-body text-base text-tertiary;
     @apply flex flex-col space-y-4;
+
+    ul {
+      @apply space-y-3;
+    }
   }
 
   &__pagination__inactive {

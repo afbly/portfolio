@@ -1,9 +1,9 @@
 import React from 'react'
-import github from '../../assets/media/svg/github.svg'
-import linkedin from '../../assets/media/svg/linkedin.svg'
-import facebook from '../../assets/media/svg/facebook.svg'
-import twitter from '../../assets/media/svg/twitter.svg'
 import { ReactComponent as Avatar } from '../../assets/media/svg/avatar.svg'
+import { ReactComponent as Github } from '../../assets/media/svg/github.svg'
+import { ReactComponent as LinkedIn } from '../../assets/media/svg/linkedin.svg'
+import { ReactComponent as Facebook } from '../../assets/media/svg/facebook.svg'
+import { ReactComponent as Twitter } from '../../assets/media/svg/twitter.svg'
 import cx from '../../assets/styles/sections/Hero.module.scss'
 
 const Hero = () => {
@@ -24,17 +24,17 @@ const Hero = () => {
           </p>
         </div>
         <div className={cx.hero__cta__links}>
-          <a href="https://github.com/afbly" className={cx.hero__cta__link}>
-            <img src={github} alt="GitHub" />
+          <a href="https://github.com/afbly">
+            <Github />
           </a>
-          <a href="https://www.linkedin.com/in/afrahlyafable/" className={cx.hero__cta__link}>
-            <img src={linkedin} alt="LinkedIn" />
+          <a href="https://www.linkedin.com/in/afrahlyafable/">
+            <LinkedIn />
           </a>
-          <a href="https://www.facebook.com/afrahly" className={cx.hero__cta__link}>
-            <img src={facebook} alt="Facebook" />
+          <a href="https://www.facebook.com/afrahly">
+            <Facebook />
           </a>
-          <a href="/" className={cx.hero__cta__link}>
-            <img src={twitter} alt="Twitter" />
+          <a href="/">
+            <Twitter />
           </a>
         </div>
       </div>

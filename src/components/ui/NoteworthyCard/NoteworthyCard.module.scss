@@ -29,16 +29,13 @@
   }
 
   &__content__link {
-    a {
+
+    svg {
       @apply cursor-pointer;
-    }
+      @apply w-8 h-auto fill-primary;
+      @apply -translate-y-0 duration-500 ease-in-out;
 
-    img {
-      @apply  border-0 w-auto h-auto -translate-y-0 duration-500 ease-in-out;
-    }
-
-    &:hover {
-      img {
+      &:hover {
         @apply -translate-y-1 duration-500 ease-in-out;
       }
     }
