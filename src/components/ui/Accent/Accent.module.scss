@@ -1,0 +1,71 @@
+.accent {
+  @apply block;
+  // width: 98.8vw;
+  // @apply px-28 justify-between;
+  // @apply font-body text-base text-tertiary flex absolute fixed top-0 h-screen;
+
+  span {
+    width: 1px;
+    @apply h-28 bg-tertiary;
+  }
+
+  &__pagination {
+    @apply absolute top-0 left-28 font-body text-base text-tertiary;
+    @apply flex flex-col space-y-4;
+
+    ul {
+      @apply space-y-3;
+    }
+  }
+
+  &__pagination__inactive {
+    @apply font-normal;
+  }
+
+  &__pagination__active {
+    @apply font-bold;
+  }
+
+  &__email {
+    @apply absolute bottom-0 right-28 flex flex-col justify-end items-end font-body text-base text-tertiary;
+  }
+
+  &__email__text {
+    transform: rotate(90deg);
+    h3 {
+      transform: translate(-6em, -5.45em);
+    }
+  }
+
+  &__scrollButton {
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    @apply flex justify-center items-center space-x-1 absolute fixed bottom-5 right-7 rounded-full w-12 h-12 bg-tertiary;
+    @apply cursor-pointer;
+
+    span {
+      @apply w-1 h-4 bg-primary rounded-md;
+
+      &:nth-child(1) {
+        @apply rotate-45;
+      }
+
+      &:nth-child(2) {
+        @apply -rotate-45;
+      }
+    }
+  }
+
+  @media screen and (max-width: 54.0625em) {
+    &__pagination {
+      @apply hidden -z-20;
+    }
+    
+    &__email {
+      @apply hidden -z-20;
+    }
+
+    &__scrollButton {
+      @apply right-5 z-40;
+    }
+  }
+}

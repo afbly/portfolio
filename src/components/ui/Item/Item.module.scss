@@ -1,5 +1,9 @@
 .item {
-  @apply flex items-center gap-x-2;
+  @apply flex space-x-2;
+
+  div {
+    @apply relative flex pt-1.5;
+  }
 
   &__arrow {
     width: 0; 

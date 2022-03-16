@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
-import {
-  BrowserRouter,
-  Link
-} from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { HashLink } from 'react-router-hash-link'
 import logo from '../../assets/media/svg/afrahly.svg'
 import cx from '../../assets/styles/sections/Navbar.module.scss'
 
@@ -10,12 +7,13 @@ const Navbar = () => {
   const [isClicked, setClick] = useState(false)
   // const [navbar, setNavbar] = useState(false)
 
-  const handleClick = () => {
-    return (
-      setClick(!isClicked)
-    )
-  }
-  // const closeMobileMenu = () => setClick(false)
+  useEffect(() => {
+    if (isClicked) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = null
+    }
+  })
 
   // const changeBackground = () => {
   //   if (window.scrollY >= 60) {
@@ -28,40 +26,38 @@ const Navbar = () => {
   // window.addEventListener('scroll', changeBackground)
 
   return (
-    <BrowserRouter>
-      <div className={cx.navbar}>
-        <Link to='/' className={cx.navbar__logo}>
-          <img src={logo} alt="Logo"/>
-        </Link>
-        <div className={cx.navbar__hamburger} onClick={handleClick}>
-          <div className={isClicked ? cx.navbar__hamburger__line__active : cx.navbar__hamburger__line}></div>
-        </div>
-        <nav>
-          <ul className={isClicked ? cx.navbar__menu__active : cx.navbar__menu}>
-            <li className={cx.navbar__menu__link}>
-              <Link to="/">
-                About
-              </Link>
-            </li>
-            <li className={cx.navbar__menu__link}>
-              <Link to="/">
-                Experience
-              </Link>
-            </li>
-            <li className={cx.navbar__menu__link}>
-              <Link to="/">
-                Projects
-              </Link>
-            </li>
-            <li className={cx.navbar__menu__link}>
-              <Link to="/">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
+    <div className={cx.navbar}>
+      <HashLink to='/#home' className={cx.navbar__logo}>
+        <img src={logo} alt="Logo"/>
+      </HashLink>
+      <div className={cx.navbar__hamburger} onClick={() => setClick(!isClicked)}>
+        <div className={isClicked ? cx.navbar__hamburger__line__active : cx.navbar__hamburger__line}></div>
       </div>
-    </BrowserRouter>
+      <nav>
+        <ul className={isClicked ? cx.navbar__menu__active : cx.navbar__menu}>
+          <li className={cx.navbar__menu__link}>
+            <HashLink smooth to="/#about" onClick={() => setClick(false)}>
+              About
+            </HashLink>
+          </li>
+          <li className={cx.navbar__menu__link}>
+            <HashLink smooth to="/#experience" onClick={() => setClick(false)}>
+              Experience
+            </HashLink>
+          </li>
+          <li className={cx.navbar__menu__link}>
+            <HashLink smooth to="/#projects" onClick={() => setClick(false)}>
+              Projects
+            </HashLink>
+          </li>
+          <li className={cx.navbar__menu__link}>
+            <HashLink smooth to="/#contact" onClick={() => setClick(false)}>
+              Contact
+            </HashLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
   )
 }
 

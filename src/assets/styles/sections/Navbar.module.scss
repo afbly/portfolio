@@ -1,35 +1,84 @@
+@import '../animations.scss';
+
 .navbar {
-  @apply flex items-center justify-between px-32 py-8;
+  @apply relative flex items-center justify-between px-44 py-8 z-20;
 
   &__logo {
     @apply relative justify-self-start w-full;
+
+    animation-duration: 2s;
+    animation-name: fadeInDown;
+    animation-iteration-count: 1;
   }
 
   &__menu {
-    @apply flex gap-x-8 p-0 m-0 text-right;  
+    @apply flex space-x-8 p-0 m-0 text-right;
   }
 
   &__menu__link {
     @apply text-quaternary font-body font-bold;
+
+    &:nth-child(1) {
+      animation-duration: 2.8s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(2) {
+      animation-duration: 2.6s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(3) {
+      animation-duration: 2.4s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(3) {
+      animation-duration: 2.2s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-child(4) {
+      animation-duration: 2s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
+    }
   } 
 
-  @media screen and (max-width: 35em) {
-    @apply py-8 px-10;
+  @media screen and (max-width: 54.0625em) {
+    @apply py-8 px-8;
 
     &__menu {
-      @apply bg-secondary flex-col fixed gap-x-0 py-20 px-8 text-base z-10;
+      @apply bg-secondary flex-col fixed space-x-0 py-20 px-8 text-base z-20;
       @apply translate-x-[100%] text-right;
+      
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
     }
 
     &__menu__active {
       inset: 0 0 0 30%;
       filter: drop-shadow(-2px 0px 5px rgba(0, 0, 0, 0.35));
-      @apply bg-secondary flex-col fixed gap-x-0 gap-y-1 py-20 px-8 text-base z-10 text-right;
-      @apply -translate-x-[0%] duration-1000 ease-in-out;
+      @apply bg-secondary flex-col fixed space-x-0 space-y-1 py-20 px-8 text-base z-20 text-right;
+      @apply translate-x-[0] duration-1000 ease-in-out;
+
+      -ms-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -o-transform: translateX(0);
     }
 
     &__hamburger {
-      @apply w-screen z-20 relative flex justify-end items-center cursor-pointer duration-500 ease-in-out;
+      @apply w-screen z-50 relative flex justify-end items-center cursor-pointer duration-500 ease-in-out;
+      animation-duration: 2s;
+      animation-name: fadeInDown;
+      animation-iteration-count: 1;
     }
   
     &__hamburger__line {
