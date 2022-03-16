@@ -57,7 +57,7 @@ const Accent = () => {
   }
 
   const listenScroll = () => {
-    var curPos = document.body.scrollTop
+    const curPos = document.body.scrollTop
     changeWeight(curPos)
   }
 
