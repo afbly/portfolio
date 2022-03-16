@@ -9,11 +9,15 @@
   }
 
   &__cta__links {
-    @apply flex space-x-2;
-  }
-  
-  &__cta__link {
-    @apply cursor-pointer;
+    @apply flex space-x-4;
+
+    a {
+      @apply cursor-pointer;
+    }
+
+    svg {
+      @apply w-8 h-auto fill-tertiary;
+    }
   }
 
   @media screen and (max-width: 23.4375em) {

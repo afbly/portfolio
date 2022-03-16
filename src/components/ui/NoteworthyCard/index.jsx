@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { ReactComponent as Github } from '../../../assets/media/svg/github.svg'
 import cx from './NoteworthyCard.module.scss'
-import github from '../../../assets/media/svg/github_white.svg'
 
 const NoteworthyCard = (props) => {
   return props.projects.map(project => (
@@ -9,7 +9,7 @@ const NoteworthyCard = (props) => {
       <div className={cx.card__content}>
         <div className={cx.card__content__link}>
           <a href={project.repo}>
-            <img src={github} alt='GitHub Repository' />
+            <Github />
           </a>
         </div>
         <h1>{project.title}</h1>

@@ -17,6 +17,12 @@ const Accent = () => {
     const projectsPos = document.getElementById('projects').offsetTop
     const contactPos = document.getElementById('contact').offsetTop
 
+    if (curPos > 120) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+
     if (curPos <= homePos) {
       setHome(cx.accent__pagination__active)
       setAbout(cx.accent__pagination__inactive)
@@ -52,11 +58,6 @@ const Accent = () => {
 
   const listenScroll = () => {
     var curPos = document.body.scrollTop
-    if (curPos > 20) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
     changeWeight(curPos)
   }
 
