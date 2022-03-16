@@ -8,6 +8,7 @@ const Accent = () => {
   const [experience, setExperience] = useState(cx.accent__pagination__inactive)
   const [project, setProject] = useState(cx.accent__pagination__inactive)
   const [contact, setContact] = useState(cx.accent__pagination__inactive)
+  const [isScrolled, setScrolled] = useState(false)
 
   const changeWeight = (curPos) => {
     const homePos = document.getElementById('home').offsetTop
@@ -51,7 +52,16 @@ const Accent = () => {
 
   const listenScroll = () => {
     var curPos = document.body.scrollTop
+    if (curPos > 20) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
     changeWeight(curPos)
+  }
+
+  const scrollToTop = () => {
+    document.body.scrollTop = 0
   }
 
   useEffect(() => {
@@ -94,6 +104,10 @@ const Accent = () => {
         <div className={cx.accent__email__text}>
           <h3>afableafrahly@gmail.com</h3>
         </div>
+        <span />
+      </div>
+      <div className={isScrolled ? cx.accent__scrollButton : ''} onClick={scrollToTop}>
+        <span />
         <span />
       </div>
     </div>
