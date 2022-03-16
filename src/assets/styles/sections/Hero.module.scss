@@ -8,14 +8,20 @@
   animation-iteration-count: 1;
 
   &__avatar {
-    @apply w-1/2 h-1/2 flex justify-center align-middle items-center;
+    @apply w-full h-full flex justify-center align-middle items-center;
+    max-width: 25em;
+    min-width: 12.5em;
+
+    svg {
+      @apply w-full h-full;
+    }
   }
 
   &__cta {
     @apply relative flex flex-col space-y-3 justify-center;
   
     h1 {
-      @apply font-body font-bold text-2xl text-quaternary;
+      @apply font-body font-bold text-3xl text-quaternary;
     }
   
     h2 {
