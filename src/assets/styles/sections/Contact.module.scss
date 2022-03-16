@@ -4,6 +4,7 @@
     @apply relative flex flex-col space-y-9 justify-center items-center py-8;
 
     p {
+      max-width: 18.75em;
       @apply font-body text-2xl text-quaternary text-center;
     }
   }
