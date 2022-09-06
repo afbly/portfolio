@@ -3,12 +3,17 @@ import { HashLink } from 'react-router-hash-link'
 import cx from './Accent.module.scss'
 
 const Accent = () => {
-  const [home, setHome] = useState(cx.accent__pagination__inactive)
+  const [home, setHome] = useState(cx.accent__pagination__active)
   const [about, setAbout] = useState(cx.accent__pagination__inactive)
   const [experience, setExperience] = useState(cx.accent__pagination__inactive)
   const [project, setProject] = useState(cx.accent__pagination__inactive)
   const [contact, setContact] = useState(cx.accent__pagination__inactive)
   const [isScrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    console.log('I should be run once')
+    document.body.scrollTop = 0
+  }, [])
 
   // useRef????
   const changeWeight = (curPos) => {
@@ -28,21 +33,14 @@ const Accent = () => {
     // instead of repeated setWeight, we just call the setPaginationWeight function to change the state of the pagination, looping through the states list
     // adding more sections will be easier
     // 157 lines to almost 110+ lines, delete this tho XD
+
     const setPaginationWeight = (currentPosition) => {
       for (let i = 0; i < states.length; i++) {
-        if (states[i].key === currentPosition) {
-          states[i].value(cx.accent__pagination__active)
-        } else {
-          states[i].value(cx.accent__pagination__inactive)
-        }
+        states[i].key === currentPosition ? states[i].value(cx.accent__pagination__active) : states[i].value(cx.accent__pagination__inactive)
       }
     }
 
-    if (curPos > 120) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
+    curPos > 120 ? setScrolled(true) : setScrolled(false) // converted to ternary operator, baka magalit ka hahahha pero less lines tsaka mukhang malinis IDK XD
 
     if (curPos <= homePos) {
       setPaginationWeight(homePos)
@@ -52,7 +50,7 @@ const Accent = () => {
       setPaginationWeight(experiencePos)
     } else if (curPos > experiencePos && curPos <= projectsPos) {
       setPaginationWeight(projectsPos)
-    } else if (curPos > projectsPos && curPos >= contactPos) {
+    } else if (curPos > projectsPos && curPos >= (contactPos - 400)) { // 400 pixel top offset contactPos on 1920 x1080 p 4270 + offset to a much lower value to trigger, works on mobile maybe??? :)
       setPaginationWeight(contactPos)
     }
   }
@@ -67,8 +65,10 @@ const Accent = () => {
   }
 
   useEffect(() => {
+    console.log('effect for event Listener called listenScroll')
     document.body.addEventListener('scroll', listenScroll)
-  })
+  }, []) // remove [] if the intendent behaviour is to add an eventListener everytime something changes
+  // when something changes without [] an event listener called scroll will be added, if this useEffect contains heavy logic, your page will load slowly everytime something changes : )
 
   return (
     <div className={cx.accent} id="accent">
