@@ -27,7 +27,7 @@ const Accent = () => {
 
     // instead of repeated setWeight, we just call the setPaginationWeight function to change the state of the pagination, looping through the states list
     // adding more sections will be easier
-    // eslint-disable-next-line space-before-function-paren
+    // 157 lines to almost 110+ lines, delete this tho XD
     const setPaginationWeight = (currentPosition) => {
       for (let i = 0; i < states.length; i++) {
         if (states[i].key === currentPosition) {
