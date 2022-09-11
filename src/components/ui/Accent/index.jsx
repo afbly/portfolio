@@ -15,7 +15,6 @@ const Accent = () => {
     document.body.scrollTop = 0
   }, [])
 
-  // useRef????
   const changeWeight = (curPos) => {
     const homePos = document.getElementById('home').offsetTop
     const aboutPos = document.getElementById('about').offsetTop
@@ -40,7 +39,7 @@ const Accent = () => {
       }
     }
 
-    curPos > 120 ? setScrolled(true) : setScrolled(false) // converted to ternary operator, baka magalit ka hahahha pero less lines tsaka mukhang malinis IDK XD
+    setScrolled(curPos > 120) // gets mo naman siguro to HAHA
 
     if (curPos <= homePos) {
       setPaginationWeight(homePos)
@@ -67,8 +66,7 @@ const Accent = () => {
   useEffect(() => {
     console.log('effect for event Listener called listenScroll')
     document.body.addEventListener('scroll', listenScroll)
-  }, []) // remove [] if the intendent behaviour is to add an eventListener everytime something changes
-  // when something changes without [] an event listener called scroll will be added, if this useEffect contains heavy logic, your page will load slowly everytime something changes : )
+  }, [])// remove [] if the intendent behaviour is to add an eventListener everytime something changes :)
 
   return (
     <div className={cx.accent} id="accent">
